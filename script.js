@@ -5,7 +5,22 @@ gsap.to(".navbar", {
   ease: "power3.out"
 });
 
-// Pulse animation on button
+// Hero animation
+gsap.from(".hero-title", {
+  y: -50,
+  opacity: 0,
+  duration: 1.2,
+  delay: 0.3,
+  ease: "power2.out"
+});
+gsap.from(".hero-subtitle", {
+  y: 20,
+  opacity: 0,
+  duration: 1,
+  delay: 0.6
+});
+
+// Pulse animation
 gsap.to(".pulse", {
   scale: 1.05,
   repeat: -1,
@@ -28,3 +43,8 @@ gsap.utils.toArray('.fade-in').forEach(el => {
     ease: "power2.out"
   });
 });
+
+// Toggle mobile nav
+function toggleMenu() {
+  document.getElementById('nav').classList.toggle('show');
+}
